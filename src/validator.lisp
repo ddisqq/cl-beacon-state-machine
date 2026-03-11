@@ -245,8 +245,7 @@
       (when (< (validator-exit-epoch validator) +far-future-epoch+)
         (return-from initiate-validator-exit nil))
       ;; Compute exit epoch
-      (let ((exit-epoch (compute-activation-exit-epoch epoch))
-            (exit-queue-epoch (compute-activation-exit-epoch epoch))
+      (let ((exit-queue-epoch (compute-activation-exit-epoch epoch))
             (exit-queue-churn 0))
         ;; Find exit queue epoch
         (loop for v across (beacon-state-validators state)

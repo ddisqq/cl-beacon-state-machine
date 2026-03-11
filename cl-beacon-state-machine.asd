@@ -38,5 +38,5 @@
     :serial t
     :components
     ((:file "test-beacon"))))
-  :perform (test-op (o c)
+  :perform (asdf:test-op (o c)
              (uiop:symbol-call :cl-beacon-state-machine.test :run-tests)))

@@ -321,8 +321,7 @@
 
 (defun process-effective-balance-updates (state)
   "Update effective balances with hysteresis."
-  (let ((hysteresis-increment (floor +effective-balance-increment+ 4))
-        (downward-threshold (* (floor +effective-balance-increment+ 4) 3))
+  (let ((downward-threshold (* (floor +effective-balance-increment+ 4) 3))
         (upward-threshold (* (floor +effective-balance-increment+ 4) 5)))
 
     (loop for i from 0 below (length (beacon-state-validators state))
@@ -349,8 +348,7 @@
 
 (defun process-eth1-data-reset (state)
   "Reset ETH1 data votes at end of voting period."
-  (let* ((current-epoch (get-current-epoch state))
-         (slots-per-period (* +epochs-per-eth1-voting-period+ +slots-per-epoch+)))
+  (let ((slots-per-period (* +epochs-per-eth1-voting-period+ +slots-per-epoch+)))
     (when (zerop (mod (1+ (beacon-state-slot state)) slots-per-period))
       (setf (beacon-state-eth1-data-votes state) nil)))
   t)

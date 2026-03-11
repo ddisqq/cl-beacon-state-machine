@@ -157,6 +157,14 @@ epoch processing, validator management, and attestation handling.")
    #:beacon-state-state-roots
 
    ;; =========================================================================
+   ;; Validator Accessors
+   ;; =========================================================================
+   #:get-validator
+   #:get-validator-by-pubkey
+   #:get-balance
+   #:get-effective-balance
+
+   ;; =========================================================================
    ;; State Accessors
    ;; =========================================================================
    #:get-current-epoch
@@ -223,6 +231,39 @@ epoch processing, validator management, and attestation handling.")
    #:compute-shuffled-index
    #:compute-proposer-index
    #:compute-committee
+
+   ;; =========================================================================
+   ;; Genesis
+   ;; =========================================================================
+   #:create-genesis-state
+
+   ;; =========================================================================
+   ;; Block Types
+   ;; =========================================================================
+   #:beacon-block
+   #:make-beacon-block
+   #:beacon-block-p
+   #:beacon-block-slot
+   #:beacon-block-proposer-index
+   #:beacon-block-parent-root
+   #:beacon-block-state-root
+   #:beacon-block-body
+
+   #:beacon-block-header
+   #:make-beacon-block-header
+   #:beacon-block-header-p
+
+   #:beacon-block-body
+   #:make-beacon-block-body
+   #:beacon-block-body-p
+   #:beacon-block-body-randao-reveal
+   #:beacon-block-body-eth1-data
+   #:beacon-block-body-graffiti
+   #:beacon-block-body-proposer-slashings
+   #:beacon-block-body-attester-slashings
+   #:beacon-block-body-attestations
+   #:beacon-block-body-deposits
+   #:beacon-block-body-voluntary-exits
 
    ;; =========================================================================
    ;; Utilities
