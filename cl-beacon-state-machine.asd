@@ -39,4 +39,6 @@
     :components
     ((:file "test-beacon"))))
   :perform (asdf:test-op (o c)
-             (uiop:symbol-call :cl-beacon-state-machine.test :run-tests)))
+             (let ((result (uiop:symbol-call :cl-beacon-state-machine.test :run-tests)))
+               (unless result
+                 (error "Tests failed")))))
