@@ -1,3 +1,6 @@
+;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+;; SPDX-License-Identifier: BSD-3-Clause
+
 ;;;; -*- Mode: Lisp; Syntax: ANSI-Common-Lisp; Base: 10 -*-
 ;;;; cl-beacon-state-machine.asd
 ;;;;
@@ -22,10 +25,10 @@
      (:file "util")
      (:file "state")
      (:file "validator")
-     (:file "attestation")
+     (:file "test-beacon")
      (:file "epoch")
      (:file "beacon"))))
-  :in-order-to ((test-op (test-op #:cl-beacon-state-machine/test))))
+  :in-order-to ((asdf:test-op (test-op #:cl-beacon-state-machine/test))))
 
 (asdf:defsystem #:cl-beacon-state-machine/test
   :description "Tests for cl-beacon-state-machine"
