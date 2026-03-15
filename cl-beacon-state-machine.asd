@@ -22,7 +22,13 @@
                 :components ((:file "package")
                              (:file "conditions" :depends-on ("package"))
                              (:file "types" :depends-on ("package"))
-                             (:file "cl-beacon-state-machine" :depends-on ("package" "conditions" "types"))))))
+                             (:file "util" :depends-on ("package"))
+                             (:file "state" :depends-on ("package" "conditions" "types"))
+                             (:file "validator" :depends-on ("package" "conditions" "types" "state"))
+                             (:file "attestation" :depends-on ("package" "conditions" "types" "state" "validator"))
+                             (:file "epoch" :depends-on ("package" "conditions" "types" "state" "validator"))
+                             (:file "beacon" :depends-on ("package" "conditions" "types" "state" "validator" "epoch" "attestation"))
+                             (:file "cl-beacon-state-machine" :depends-on ("package" "conditions" "types" "beacon" "validator" "state")))))
   :in-order-to ((asdf:test-op (test-op #:cl-beacon-state-machine/test))))
 
 (asdf:defsystem #:cl-beacon-state-machine/test
