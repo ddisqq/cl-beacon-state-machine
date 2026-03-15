@@ -6,7 +6,11 @@
 (defpackage #:cl-beacon-state-machine
   (:use #:cl)
   (:export
-   #:with-beacon-state-machine-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-beacon-state-machine-timing
    #:beacon-state-machine-batch-process
    #:beacon-state-machine-health-check#:cl-beacon-state-machine-error
    #:cl-beacon-state-machine-validation-error#:init
