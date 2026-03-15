@@ -1,12 +1,12 @@
 ;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
-;; SPDX-License-Identifier: BSD-3-Clause
+;; SPDX-License-Identifier: Apache-2.0
 
 ;;;; beacon.lisp
 ;;;;
 ;;;; Top-level state transition functions for cl-beacon-state-machine
 ;;;; Implements process_slots, process_block, and state_transition
 ;;;; Copyright (c) 2024-2026 Parkian Company LLC
-;;;; License: BSD-3-Clause
+;;;; License: Apache-2.0
 
 (in-package #:cl-beacon-state-machine)
 

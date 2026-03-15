@@ -13,7 +13,7 @@
 (asdf:defsystem #:cl-beacon-state-machine
   :description "Proof-of-Stake beacon chain state machine with epoch processing, validators, and attestations"
   :author "Parkian Company LLC"
-  :license "BSD-3-Clause"
+  :license "Apache-2.0"
   :version "0.1.0"
   :serial t
   :depends-on ()  ; Pure Common Lisp - no external dependencies
@@ -33,7 +33,7 @@
 (asdf:defsystem #:cl-beacon-state-machine/test
   :description "Tests for cl-beacon-state-machine"
   :author "Parkian Company LLC"
-  :license "BSD-3-Clause"
+  :license "Apache-2.0"
   :depends-on (#:cl-beacon-state-machine)
   :serial t
   :components

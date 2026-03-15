@@ -1,5 +1,5 @@
 ;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
-;; SPDX-License-Identifier: BSD-3-Clause
+;; SPDX-License-Identifier: Apache-2.0
 
 ;;;; package.lisp
 ;;;;
@@ -7,7 +7,7 @@
 ;;;; A standalone PoS beacon chain state machine
 ;;;;
 ;;;; Copyright (c) 2024-2026 Parkian Company LLC
-;;;; License: BSD-3-Clause
+;;;; License: Apache-2.0
 
 (defpackage #:cl-beacon-state-machine
   (:use #:cl)
