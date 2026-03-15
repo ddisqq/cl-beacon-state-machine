@@ -6,7 +6,10 @@
 (defpackage #:cl-beacon-state-machine
   (:use #:cl)
   (:export
-   #:init
+   #:with-beacon-state-machine-timing
+   #:beacon-state-machine-batch-process
+   #:beacon-state-machine-health-check#:cl-beacon-state-machine-error
+   #:cl-beacon-state-machine-validation-error#:init
    #:status
    #:cleanup
    #:process

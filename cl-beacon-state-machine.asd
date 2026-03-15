@@ -19,15 +19,10 @@
   :depends-on ()  ; Pure Common Lisp - no external dependencies
   :components
   ((:module "src"
-    :serial t
-    :components
-    ((:file "package")
-     (:file "util")
-     (:file "state")
-     (:file "validator")
-     (:file "test-beacon")
-     (:file "epoch")
-     (:file "beacon"))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-beacon-state-machine" :depends-on ("package" "conditions" "types"))))))
   :in-order-to ((asdf:test-op (test-op #:cl-beacon-state-machine/test))))
 
 (asdf:defsystem #:cl-beacon-state-machine/test
