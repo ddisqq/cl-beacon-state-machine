@@ -6,6 +6,9 @@
 (defpackage #:cl-beacon-state-machine
   (:use #:cl)
   (:export
+   #:beacon-state-machine-execute
+   #:initialize-beacon-state-machine
+   #:beacon-state-machine-context
    #:memoize-function
    #:deep-copy-list
    #:group-by-count
